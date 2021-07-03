@@ -13,10 +13,10 @@ $radius: 10px;
 
 $breakpoints-down: (
 	"xs": "400px",
-	"small": "800px",
-	"medium": "1024px",
-	"midi": "1280px",
-	"large": "1380px",
+	"small": "1100px",
+	// "medium": "1024px",
+	// "midi": "1280px",
+	// "large": "1380px",,
 );
 
 @mixin breakpoint-down($size) {
