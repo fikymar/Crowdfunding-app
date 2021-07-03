@@ -13,12 +13,6 @@ Users should be able to:
 - See the number of total backers increment by one after confirming a pledge
 - Toggle whether or not the product is bookmarked
 
-### Screenshot
-
-![](./screenshot.jpg)
-![image](https://user-images.githubusercontent.com/67013637/124364792-0c77d980-dc44-11eb-9372-d780bec2e110.png)
-
-
 ### Links
 
 
@@ -29,6 +23,14 @@ Users should be able to:
 
 - SCSS
 - React
+
+
+### Screenshot
+
+![](./screenshot.jpg)
+![image](https://user-images.githubusercontent.com/67013637/124364792-0c77d980-dc44-11eb-9372-d780bec2e110.png)
+
+
 
 
 ## Author
