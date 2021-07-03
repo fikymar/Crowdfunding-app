@@ -22,7 +22,7 @@ Users should be able to:
 ### Links
 
 
-- Live Site URL: [Add live site URL here](https://crowfunding-app.vercel.app/)
+- Live Site URL: [Vercel](https://crowfunding-app.vercel.app/)
 
 
 ### Built with
@@ -33,7 +33,7 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/fikymar)
+- Website - [FikyMar](https://www.your-site.com)
+- Frontend Mentor - [@fikymar](https://www.frontendmentor.io/profile/fikymar)
 
 
