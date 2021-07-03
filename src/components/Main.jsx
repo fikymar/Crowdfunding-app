@@ -72,7 +72,7 @@ const Main = () => {
                         <p>of $100,000 backed</p>
                     </div>
                     <div className="main_counter--area">
-                        <h1>{backers.toLocaleString('en').replace(/,/g, ".")}</h1>
+                        <h1>{backers.toLocaleString('en')}</h1>
                         <p>total backers</p>
                     </div>
                     <div className="main_counter--area">
