@@ -1,0 +1,185 @@
+.main_layout {
+	position: relative;
+	top: -50px;
+	width: 100vw;
+	min-height: 150vh;
+	display: grid;
+	grid-template-rows: 19vw auto auto;
+	grid-template-columns: 50vw;
+	row-gap: 1.6875rem;
+	margin: 0 25vw;
+	border-radius: $radius;
+
+	@include breakpoint-down(small) {
+		grid-template-rows: auto auto auto;
+		grid-template-columns: 90vw;
+		margin: 1rem;
+	}
+
+	& .main_header {
+		grid-row: 1/1;
+		position: relative;
+		background: white;
+		width: 50vw;
+		height: 19vw;
+		display: grid;
+		grid-template-rows: auto auto auto;
+		grid-column: 50vw;
+		row-gap: 5px;
+		align-items: center;
+		padding: 3.0625rem;
+		border-radius: $radius;
+
+		@include breakpoint-down(small) {
+			height: auto;
+			width: 100%;
+			padding: 2rem 1rem;
+		}
+
+		& h2 {
+			grid-row: 1/1;
+			text-align: center;
+			align-self: end;
+			font-size: 21px;
+		}
+
+		& p {
+			grid-row: 2/2;
+			text-align: center;
+			align-self: start;
+			font-size: 15px;
+			color: $darkGray;
+		}
+
+		&--logo {
+			position: absolute;
+			top: -10%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&--buttons {
+			grid-row: 3/3;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 1rem;
+		}
+
+		&--bookmarkBTN {
+			height: 3.8vw; //6vh,56px
+			width: auto;
+			background: $bgr;
+			border-radius: 25px;
+			color: $black;
+			border: none;
+			outline: none;
+			padding: 1.5625rem 1.625rem 25px 0;
+			font-size: 0.9rem;
+			font-weight: 600;
+			line-height: 0;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+
+			& span {
+				margin-left: 1rem;
+
+				@include breakpoint-down(small) {
+					display: none;
+				}
+			}
+
+			&.bookmarked {
+				color: $darkCyan;
+
+				& svg {
+					& circle {
+						fill: $darkCyan;
+					}
+
+					& path {
+						fill: white;
+					}
+				}
+			}
+		}
+	}
+
+	& .main_counter {
+		background: white;
+		height: 15vw;
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-template-rows: 10vw 5vw;
+		border-radius: $radius;
+
+		@include breakpoint-down(small) {
+			display: flex;
+			flex-direction: column;
+			height: auto;
+			padding-bottom: 2.9375rem;
+		}
+
+		&--area {
+			grid-row: 1/1;
+			padding: 0 2.9375rem;
+			border-right-style: solid;
+			border-width: thin;
+			border-color: $darkGray;
+			align-self: center;
+			margin-bottom: 0;
+
+			@include breakpoint-down(small) {
+				border-right-style: none;
+				border-bottom: 1px solid $gray;
+				padding: 2.9375rem 0;
+			}
+
+			&:nth-child(3) {
+				border: none;
+			}
+
+			& p {
+				color: $darkGray;
+				font-size: 15px;
+			}
+		}
+		& input[type="range"] {
+			grid-row: 2/2;
+			grid-column: 1/4;
+			filter: hue-rotate(313deg);
+			margin-left: 3rem;
+			width: 86%;
+
+			@include breakpoint-down(small) {
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	& .main_about {
+		width: 50vw;
+		background: white;
+		padding: 46px;
+		border-radius: $radius;
+
+		@include breakpoint-down(small) {
+			width: 100%;
+			padding: 2rem 2rem;
+		}
+
+		&--header {
+			font-size: 18px;
+		}
+
+		&--desc {
+			margin-top: 45px;
+			color: $darkGray;
+
+			&:last-of-type {
+				margin-bottom: 45px;
+			}
+		}
+	}
+}

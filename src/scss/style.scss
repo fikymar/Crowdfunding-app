@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap");
+
+@import "variables";
+@import "button";
+@import "card";
+@import "nav";
+@import "header";
+@import "modal";
+@import "main";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Commissioner", sans-serif;
+	font-size: $fontSize;
+	background: $bgr;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+p {
+	color: $darkGray;
+	font-size: 15px;
+
+	@include breakpoint-down(xs) {
+		font-size: 13px;
+	}
+}

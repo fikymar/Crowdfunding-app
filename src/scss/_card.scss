@@ -1,0 +1,89 @@
+.card {
+	background: white;
+	//margin: 46px;
+	//width: calc(50vw - (2 * 46px));
+	border: 1px solid $gray;
+	border-radius: $radius;
+	padding: 32px;
+	margin-top: 25px;
+
+	display: grid;
+	grid: 1fr 1fr 1fr / 1fr 1fr;
+	grid-template-areas:
+		"header pledge"
+		"desc desc"
+		"count button";
+	row-gap: 1rem;
+	align-items: center;
+
+	@include breakpoint-down(small) {
+		display: grid;
+		grid: auto auto auto auto auto / 1fr;
+		grid-template-areas:
+			"header"
+			"pledge"
+			"desc"
+			"count"
+			"button";
+		align-items: center;
+		justify-items: start;
+		row-gap: 1rem;
+	}
+
+	&_header {
+		grid-area: header;
+		justify-self: start;
+		font-size: 18px;
+	}
+
+	&_pledge {
+		grid-area: pledge;
+		justify-self: end;
+		color: $moderateCyan;
+		font-size: 16px;
+		font-weight: 500;
+
+		@include breakpoint-down(small) {
+			justify-self: start;
+		}
+	}
+
+	&_desc {
+		grid-area: desc;
+		color: $darkGray;
+	}
+
+	&_count {
+		grid-area: count;
+		justify-self: start;
+		color: $darkGray;
+		font-size: 15px;
+
+		& span {
+			color: black;
+			font-size: 21px;
+			font-weight: 700;
+		}
+	}
+
+	&_BTN {
+		grid-area: button;
+		justify-self: end;
+
+		@include breakpoint-down(small) {
+			justify-self: start;
+		}
+	}
+}
+
+.disabledCard {
+	opacity: 0.5;
+
+	& h4:hover {
+		color: inherit;
+	}
+
+	& input[type="checkbox"] {
+		filter: hue-rotate(20deg);
+	}
+}

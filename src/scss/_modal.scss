@@ -1,0 +1,238 @@
+.selectionModal {
+	position: absolute;
+	top: 20vh;
+	left: 50%;
+	transform: translate(-50%, 0);
+	min-height: 100vh;
+	border-radius: $radius;
+	width: 51vw;
+	padding: 3rem 3rem;
+
+	background-color: white;
+	z-index: 10;
+	box-shadow: 0px 0px 50px 300vh rgba(0, 0, 0, 0.5);
+
+	& .closeModal_BTN {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		border: none;
+		outline: none;
+		background: none;
+	}
+
+	&_header {
+		margin-bottom: 1rem;
+	}
+
+	@include breakpoint-down(small) {
+		width: 90vw;
+		padding: 3rem 1rem;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.selectionModal_card {
+	background: white;
+	margin: 1.5rem 0;
+	padding: 1.5rem 0;
+	border-radius: $radius;
+	border: 1px solid $gray;
+
+	display: grid;
+	grid: 1fr 1fr auto / 1fr 4fr 4fr 2fr;
+	grid-template-areas:
+		"checkbox header pledge count"
+		". desc desc desc"
+		"enter enter enter enter";
+	align-items: center;
+
+	@include breakpoint-down(small) {
+		grid: 1fr 1fr auto 1fr auto / 1fr 5fr;
+		grid-template-areas:
+			"checkbox header"
+			"checkbox pledge"
+			"desc desc"
+			"count count"
+			"enter enter";
+		padding: 1.5rem 1.5rem;
+		justify-items: start;
+	}
+
+	& input {
+		grid-area: checkbox;
+		width: 1.5rem;
+		height: 1.5rem;
+		filter: hue-rotate(320deg);
+		margin: 0 1.5rem;
+
+		@include breakpoint-down(small) {
+			margin: 0.5rem;
+			justify-self: end;
+		}
+	}
+
+	&_header {
+		grid-area: header;
+
+		&:hover {
+			color: $moderateCyan;
+		}
+	}
+	&_desc {
+		grid-area: desc;
+
+		@include breakpoint-down(small) {
+			text-align: left;
+		}
+	}
+
+	&_pledge {
+		grid-area: pledge;
+		color: $moderateCyan;
+
+		@include breakpoint-down(small) {
+			align-self: start;
+		}
+	}
+
+	&_count {
+		grid-area: count;
+		justify-self: end;
+		margin-right: 1.5rem;
+		@include breakpoint-down(small) {
+			justify-self: start;
+		}
+
+		& span {
+			color: black;
+			font-size: 21px;
+			font-weight: 700;
+		}
+	}
+
+	& .selectionModal_card_enterPledge {
+		position: relative;
+		grid-area: enter;
+		display: grid;
+		grid: 1fr/ 3fr 3fr 3fr 3fr;
+		grid-template-areas: "p . input button";
+		align-items: center;
+		padding-top: 1rem;
+		margin-top: 4 rem;
+
+		@include breakpoint-down(small) {
+			grid: 1fr 1fr/ 1fr 1fr;
+			grid-template-areas:
+				"p p"
+				"input button";
+		}
+
+		.selectionModal_card_enterPledge_desc {
+			grid-area: p;
+			margin-left: 1.5rem;
+			@include breakpoint-down(small) {
+				margin: 0;
+				justify-self: center;
+			}
+		}
+
+		.selectionModal_card_enterPledge_input {
+			grid-area: input;
+			height: 3.5rem;
+			width: 8vw;
+			border: 1px solid $gray;
+			border-radius: 25px;
+			padding-left: 1rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			@include breakpoint-down(small) {
+				justify-items: stretch;
+				width: auto;
+				margin-right: 1rem;
+			}
+
+			& input {
+				width: 50%;
+
+				margin-left: 1rem;
+				border: none;
+				font-weight: 600;
+				font-size: 16px;
+
+				& label {
+					font-size: 16px;
+					color: $darkGray;
+					margin-left: 1rem;
+				}
+			}
+		}
+
+		& button {
+			grid-area: button;
+			margin-right: 1.5rem;
+
+			@include breakpoint-down(small) {
+				justify-self: end;
+				margin-right: 0;
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 1px;
+			border-top: 1px solid $gray;
+			padding-top: 1rem;
+
+			@include breakpoint-down(small) {
+				top: 1rem;
+				left: -1.5rem;
+				width: calc(90vw - 1.5rem - 1rem + 5px);
+			}
+		}
+	}
+}
+
+.checked {
+	border-color: $moderateCyan;
+
+	& h5 {
+		font-weight: 600;
+	}
+}
+
+// modal thanks
+
+.modal {
+	position: absolute;
+	background: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: 15;
+	width: 40vw;
+	min-height: 50vh;
+	border-radius: $radius;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	box-shadow: 0px 0px 50px 100vw rgba(0, 0, 0, 0.5);
+
+	& .modal_desc {
+		text-align: center;
+	}
+}
+
+.hide {
+	display: none;
+}

@@ -1,0 +1,28 @@
+.button {
+	height: 3.5rem; //56px 3.8vw
+	width: auto;
+	background: $moderateCyan;
+	border-radius: 25px;
+	color: white;
+	border: none;
+	outline: none;
+	padding: 1.5625rem 2.8125rem;
+	font-size: 0.9rem;
+	font-weight: 600;
+	line-height: 0;
+
+	&:hover {
+		background-color: $darkCyan;
+	}
+}
+
+.active {
+	background-color: $darkCyan;
+}
+
+.disabled {
+	background-color: $darkGray;
+	&:hover {
+		background-color: $darkGray;
+	}
+}

@@ -1,0 +1,12 @@
+.header {
+	background-image: url("../imgs/image-hero-desktop.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 28vw;
+	width: 100%;
+
+	@include breakpoint-down(small) {
+		background-image: url("../imgs/image-hero-mobile.jpg");
+		height: 30vh;
+	}
+}
