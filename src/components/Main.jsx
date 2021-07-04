@@ -81,7 +81,8 @@ const Main = () => {
                     <p>days left</p>
                 </div>
                     <label htmlFor="counterRange"></label>
-                    <input type="range" id='counterRange' name='counterRange' min='0' max='100000' value={dollars} readOnly/>
+                    <input type="range" id='counterRange' name='counterRange' min='0' max='100000' value={dollars} readOnly />
+                        
             </article>
                 
             <article className="main_about">

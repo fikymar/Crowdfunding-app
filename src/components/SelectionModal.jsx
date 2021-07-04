@@ -57,7 +57,7 @@ const SelectionModalCard = ({ k, header, desc, count, pledge, placeholder, id, h
                     <p className='selectionModal_card_enterPledge_desc'>Enter your pledge</p>
                     <div className='selectionModal_card_enterPledge_input'>
                     <label htmlFor={k}>$</label>
-                    <input value={input} onInput={e => setInput(parseInt(e.target.value))}  type="number" title='Enter value' name={k}  min={min} />
+                    <input value={input} onInput={e => setInput(parseInt(e.target.value))}  type="number" title='Enter value' name={k} id={k} min={min} />
 
                     </div>
                     <Button value='Continue' title='Confirm pledge' handleInput={handleInput} handleFinalModal={handleFinalModal} handleModal={handleModal}/>
