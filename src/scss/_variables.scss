@@ -3,7 +3,7 @@ $moderateCyan: hsl(176, 50%, 47%);
 $darkCyan: hsl(176, 72%, 28%);
 $black: hsl(0, 0%, 0%);
 $darkGray: hsl(0, 0%, 48%);
-$bgr: rgb(245, 245, 234);
+$bgr: rgb(250, 250, 250);
 
 $gray: rgba(122, 122, 122, 0.5);
 
@@ -13,10 +13,10 @@ $radius: 10px;
 
 $breakpoints-down: (
 	"xs": "400px",
-	"small": "1100px",
-	// "medium": "1024px",
-	// "midi": "1280px",
-	// "large": "1380px",,
+	"small": "800px",
+	"medium": "1024px",
+	"midi": "1280px",
+	"large": "1380px",
 );
 
 @mixin breakpoint-down($size) {

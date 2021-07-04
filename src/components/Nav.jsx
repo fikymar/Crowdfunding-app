@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, {  useState } from 'react'
 import logo from '../imgs/logo.svg'
 import hamburgerIcon from '../imgs/icon-hamburger.svg'
 import closeIcon from '../imgs/icon-close-menu.svg'
 
 const Nav = () => {
     const [hamburger, setHamburger] = useState(false);
+    const [size, setSize] = useState(window.innerWidth)
+   
+    const windowSize = () => {
+        setSize(window.innerWidth)
+    }
+    window.addEventListener('resize', windowSize )
+   
 
     const handleHamburger = (e) => {
         setHamburger(!hamburger)
@@ -13,7 +20,7 @@ const Nav = () => {
         }
     }
 
-    //console.log(window.innerWidth)
+   
     return (
         <div className='nav'>
             <img className='logo' src={logo} alt="logo" />
@@ -22,8 +29,8 @@ const Nav = () => {
                 <a href="/">Discover</a>
                 <a href="/">Get Started</a>
             </nav>
-            {window.innerWidth <= 800 ? 
-                <img className='hamburgerLogo' src={hamburgerIcon} alt='hamburger' onClick={(e) => handleHamburger(e) }/> : null }
+            {size <= 800 ? 
+                <img className='hamburgerLogo' src={hamburgerIcon} alt='hamburger' title='menu' onClick={(e) => handleHamburger(e) }/> : null }
         </div>
     )
 }

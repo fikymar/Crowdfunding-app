@@ -10,7 +10,7 @@ const Card = ({header, p, pledge, count, value, disabled, handleFinalModal, hand
 
             <p className='card_count'><span>{count}</span> left</p>
             <div className='card_BTN'>
-                <Button value={value} disabled={disabled} className='card_BTN' handleFinalModal={handleFinalModal} handleModal={handleModal}/>
+                <Button title='Select reward' value={value} disabled={disabled} className='card_BTN' handleFinalModal={handleFinalModal} handleModal={handleModal}/>
                 </div>
         </div>
     )

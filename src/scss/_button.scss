@@ -11,7 +11,9 @@
 	font-weight: 600;
 	line-height: 0;
 
-	&:hover {
+	&:hover,
+	:focus,
+	:active {
 		background-color: $darkCyan;
 	}
 }

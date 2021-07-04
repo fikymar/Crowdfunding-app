@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../scss/style.css';
 
-const Button = ({ value, disabled, handleModal, handleFinalModal, handleBackers, handleInput}) => {
+const Button = ({ value, disabled, handleModal, handleFinalModal, handleBackers, handleInput, title}) => {
     const [clicked, setClicked] = useState(false);
   
     const handleClick = (e) => {
@@ -18,7 +18,7 @@ const Button = ({ value, disabled, handleModal, handleFinalModal, handleBackers,
 
         if (handleBackers) {
              handleBackers()
-           // console.log(backers)
+          
         }
 
         if (handleInput) {
@@ -29,7 +29,7 @@ const Button = ({ value, disabled, handleModal, handleFinalModal, handleBackers,
     }
     
     return (
-        <button type='button' onClick={() => handleClick()}
+        <button type='button' title={title} onClick={() => handleClick()}
            
            
             className={`button ${clicked ? 'active' : ''} ${disabled ? 'disabled' : ''}`}>{value}</button>

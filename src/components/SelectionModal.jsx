@@ -11,25 +11,25 @@ const SelectionModal = ({ showme, handleModal, handleDollars,handleFinalModal })
 
     return (
         <div className={`selectionModal  ${(showme) ? '' : 'hidden'}`}>
-            <button className="closeModal_BTN" onClick={() => handleModal()}>
+            <button title='close' className="closeModal_BTN" onClick={() => handleModal()}>
                 {closeModal}
                 </button>
             <h1 className='selectionModal_header'>Back this project</h1>
             <p className='selectionModal_desc'>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-            <SelectionModalCard  handleFinalModal={handleFinalModal}  handleModal={handleModal} handleDollars={handleDollars} header='Pledge with no reward' desc='Choose to support us without a reward if you simply believe in our project. As a backer,
-  you will be signed up to receive product updates via email.' id={1}/>
-            <SelectionModalCard handleFinalModal={handleFinalModal}  handleModal={handleModal} handleDollars={handleDollars} header='Bamboo Stand' desc="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
-  you’ll be added to a special Backer member list." pledge={'$25'} min={25} count={101} id={2}/>
-            <SelectionModalCard handleFinalModal={handleFinalModal} handleModal={handleModal} handleDollars={handleDollars} header=' Black Edition Stand' desc="You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
+            <SelectionModalCard id='checker1' k={1} handleFinalModal={handleFinalModal}  handleModal={handleModal} handleDollars={handleDollars} header='Pledge with no reward' desc='Choose to support us without a reward if you simply believe in our project. As a backer,
+  you will be signed up to receive product updates via email.'/>
+            <SelectionModalCard id='checker2' k={2} handleFinalModal={handleFinalModal}  handleModal={handleModal} handleDollars={handleDollars} header='Bamboo Stand' desc="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
+  you’ll be added to a special Backer member list." pledge={'$25'} min={25} count={101}/>
+            <SelectionModalCard id='checker3' k={3} handleFinalModal={handleFinalModal} handleModal={handleModal} handleDollars={handleDollars} header=' Black Edition Stand' desc="You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
   member list. Shipping is included." pledge={'$75'} min={75} count={64} />
-            <SelectionModalCard handleFinalModal={handleFinalModal}  handleDollars={handleDollars} header='Mahogany Special Edition' desc='You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
+            <SelectionModalCard id='checker4' k={4} handleFinalModal={handleFinalModal}  handleDollars={handleDollars} header='Mahogany Special Edition' desc='You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
   to our Backer member list. Shipping is included.' pledge={'$200'} count={'0'}  />
         </div>
     )
 }
 
             
-const SelectionModalCard = ({ header, desc, count, pledge, placeholder, id, handleDollars, min, handleFinalModal, handleModal}) => {
+const SelectionModalCard = ({ k, header, desc, count, pledge, placeholder, id, handleDollars, min, handleFinalModal, handleModal}) => {
     const [check, setCheck] = useState(false);
     const [input, setInput] = useState(25);
     
@@ -42,8 +42,11 @@ const SelectionModalCard = ({ header, desc, count, pledge, placeholder, id, hand
     return (
         <div className={`selectionModal_card ${check ? 'checked' : ''}
         ${ count === '0' ? 'disabledCard' : ''}`} >
-            <input type="radio" name='checker' onChange={() => setCheck(!check)} />
-            <label htmlFor='checker'></label>
+           
+            <label className='checker' htmlFor={id}></label>
+                <input type="radio" title='Set reward' name={id} onClick={() => setCheck(!check)} />
+                
+            
             <h4 className="selectionModal_card_header">{header}</h4>
             <p className="selectionModal_card_desc">{desc}</p>
             {pledge ? <h5 className='selectionModal_card_pledge'>Pledge {pledge} or more</h5> : null}
@@ -53,11 +56,11 @@ const SelectionModalCard = ({ header, desc, count, pledge, placeholder, id, hand
                 (<div className='selectionModal_card_enterPledge'>
                     <p className='selectionModal_card_enterPledge_desc'>Enter your pledge</p>
                     <div className='selectionModal_card_enterPledge_input'>
-                    <label htmlFor="pledgeCount">$</label>
-                    <input value={input} key={id} onInput={e => setInput(parseInt(e.target.value))}  type="number" name='pledgeCount'  min={min} />
+                    <label htmlFor={k}>$</label>
+                    <input value={input} onInput={e => setInput(parseInt(e.target.value))}  type="number" title='Enter value' name={k}  min={min} />
 
                     </div>
-                    <Button value='Continue' handleInput={handleInput} handleFinalModal={handleFinalModal} handleModal={handleModal}/>
+                    <Button value='Continue' title='Confirm pledge' handleInput={handleInput} handleFinalModal={handleFinalModal} handleModal={handleModal}/>
                     </div>
             ) : null }
             

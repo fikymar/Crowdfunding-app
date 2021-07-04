@@ -13,7 +13,9 @@
   line-height: 0;
 }
 
-.button:hover {
+.button:hover,
+.button :focus,
+.button :active {
   background-color: #147b74;
 }
 
@@ -45,7 +47,7 @@
           align-items: center;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .card {
     display: -ms-grid;
     display: grid;
@@ -77,7 +79,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .card_pledge {
     -ms-grid-column-align: start;
         justify-self: start;
@@ -114,7 +116,7 @@
       justify-self: end;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .card_BTN {
     -ms-grid-column-align: start;
         justify-self: start;
@@ -145,7 +147,7 @@
           justify-content: space-between;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .nav {
     padding: 1rem;
     -webkit-box-orient: vertical;
@@ -162,9 +164,10 @@
   top: 1rem;
   right: 5vw;
   z-index: 20;
+  cursor: pointer;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .nav .logo {
     width: 8rem;
   }
@@ -183,7 +186,7 @@
           justify-content: space-between;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .nav .nav_list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -215,7 +218,7 @@
   font-weight: 500;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .nav .nav_list a {
     font-size: 21px;
     border-bottom: 1px solid rgba(122, 122, 122, 0.5);
@@ -233,7 +236,7 @@
   width: 100%;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .header {
     background-image: url("../imgs/image-hero-mobile.jpg");
     height: 30vh;
@@ -269,7 +272,14 @@
   margin-bottom: 1rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
+  .selectionModal {
+    width: 80vw;
+    padding: 3rem 3rem;
+  }
+}
+
+@media (max-width: 800px) {
   .selectionModal {
     width: 90vw;
     padding: 3rem 1rem;
@@ -295,12 +305,14 @@
           align-items: center;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card {
     grid: 1fr 1fr auto 1fr auto / 1fr 5fr;
         grid-template-areas: "checkbox header" "checkbox pledge" "desc desc" "count count" "enter enter";
     padding: 1.5rem 1.5rem;
     justify-items: start;
+    -webkit-column-gap: 1rem;
+            column-gap: 1rem;
   }
 }
 
@@ -315,7 +327,12 @@
   margin: 0 1.5rem;
 }
 
-@media (max-width: 1100px) {
+.selectionModal_card input:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media (max-width: 1280px) {
   .selectionModal_card input {
     margin: 0.5rem;
     -ms-grid-column-align: end;
@@ -340,7 +357,7 @@
   grid-area: desc;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card_desc {
     text-align: left;
   }
@@ -353,7 +370,7 @@
   color: #3cb4ac;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card_pledge {
     -ms-flex-item-align: start;
         -ms-grid-row-align: start;
@@ -370,7 +387,7 @@
   margin-right: 1.5rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card_count {
     -ms-grid-column-align: start;
         justify-self: start;
@@ -400,7 +417,7 @@
   margin-top: 4 rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card .selectionModal_card_enterPledge {
     grid: 1fr 1fr/ 1fr 1fr;
         grid-template-areas: "p p" "input button";
@@ -414,7 +431,7 @@
   margin-left: 1.5rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card .selectionModal_card_enterPledge .selectionModal_card_enterPledge_desc {
     margin: 0;
     -ms-grid-column-align: center;
@@ -442,7 +459,7 @@
           justify-content: center;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card .selectionModal_card_enterPledge .selectionModal_card_enterPledge_input {
     justify-items: stretch;
     width: auto;
@@ -471,7 +488,7 @@
   margin-right: 1.5rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card .selectionModal_card_enterPledge button {
     -ms-grid-column-align: end;
         justify-self: end;
@@ -489,7 +506,7 @@
   padding-top: 1rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
   .selectionModal_card .selectionModal_card_enterPledge::after {
     top: 1rem;
     left: -1.5rem;
@@ -530,12 +547,36 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  -webkit-box-shadow: 0px 0px 50px 100vw rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 50px 100vw rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 0px 50px 300vw rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 50px 300vw rgba(0, 0, 0, 0.5);
+}
+
+.modal_header {
+  margin: 1rem 0;
+}
+
+@media (max-width: 1280px) {
+  .modal {
+    width: 60vw;
+    top: 20%;
+  }
+  .modal_header {
+    text-align: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .modal {
+    width: 90vw;
+  }
+  .modal_header {
+    font-size: 1.5rem;
+  }
 }
 
 .modal .modal_desc {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .hide {
@@ -549,8 +590,8 @@
   min-height: 150vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 19vw auto auto;
-      grid-template-rows: 19vw auto auto;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
   -ms-grid-columns: 50vw;
       grid-template-columns: 50vw;
   row-gap: 1.6875rem;
@@ -558,7 +599,15 @@
   border-radius: 10px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
+  .main_layout {
+    -ms-grid-columns: 80vw;
+        grid-template-columns: 80vw;
+    margin: 0 10vw;
+  }
+}
+
+@media (max-width: 800px) {
   .main_layout {
     -ms-grid-rows: auto auto auto;
         grid-template-rows: auto auto auto;
@@ -574,7 +623,7 @@
   position: relative;
   background: white;
   width: 50vw;
-  height: 19vw;
+  height: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto auto auto;
@@ -589,7 +638,15 @@
   border-radius: 10px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
+  .main_layout .main_header {
+    height: auto;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 800px) {
   .main_layout .main_header {
     height: auto;
     width: 100%;
@@ -641,7 +698,7 @@
 .main_layout .main_header--bookmarkBTN {
   height: 3.8vw;
   width: auto;
-  background: #f5f5ea;
+  background: #fafafa;
   border-radius: 25px;
   color: black;
   border: none;
@@ -665,11 +722,17 @@
           justify-content: space-between;
 }
 
+@media (max-width: 800px) {
+  .main_layout .main_header--bookmarkBTN {
+    background: white;
+  }
+}
+
 .main_layout .main_header--bookmarkBTN span {
   margin-left: 1rem;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .main_layout .main_header--bookmarkBTN span {
     display: none;
   }
@@ -689,7 +752,7 @@
 
 .main_layout .main_counter {
   background: white;
-  height: 15vw;
+  height: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto auto auto;
@@ -699,7 +762,7 @@
   border-radius: 10px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .main_layout .main_counter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -726,7 +789,7 @@
   margin-bottom: 0;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .main_layout .main_counter--area {
     border-right-style: none;
     border-bottom: 1px solid rgba(122, 122, 122, 0.5);
@@ -755,7 +818,7 @@
   width: 86%;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 800px) {
   .main_layout .main_counter input[type="range"] {
     margin-left: 1rem;
   }
@@ -768,7 +831,13 @@
   border-radius: 10px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1280px) {
+  .main_layout .main_about {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 800px) {
   .main_layout .main_about {
     width: 100%;
     padding: 2rem 2rem;
@@ -798,7 +867,7 @@
 body {
   font-family: "Commissioner", sans-serif;
   font-size: 16px;
-  background: #f5f5ea;
+  background: #fafafa;
   line-height: 1.5;
 }
 
@@ -816,5 +885,10 @@ p {
   p {
     font-size: 13px;
   }
+}
+
+button,
+input {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
