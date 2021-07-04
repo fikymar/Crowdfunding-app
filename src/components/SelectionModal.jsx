@@ -44,7 +44,7 @@ const SelectionModalCard = ({ k, header, desc, count, pledge, placeholder, id, h
         ${ count === '0' ? 'disabledCard' : ''}`} >
            
             <label className='checker' htmlFor={id}></label>
-                <input type="radio" title='Set reward' name={id} onClick={() => setCheck(!check)} />
+            <input type="radio" title='Set reward' name={id} id={id} onClick={() => setCheck(!check)} />
                 
             
             <h4 className="selectionModal_card_header">{header}</h4>
