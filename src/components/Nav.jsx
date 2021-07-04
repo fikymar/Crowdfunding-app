@@ -26,8 +26,8 @@ const Nav = () => {
             <img className='logo' src={logo} alt="logo" />
             <nav className={ `nav_list ${hamburger ? '' : 'hiddenNav'}`}>
                 <a href="/#about">About</a>
-                <a href="/">Discover</a>
-                <a href="/">Get Started</a>
+                <a href="/#about">Discover</a>
+                <a href="/#about">Get Started</a>
             </nav>
             {size <= 800 ? 
                 <img className='hamburgerLogo' src={hamburgerIcon} alt='hamburger' title='menu' onClick={(e) => handleHamburger(e) }/> : null }
