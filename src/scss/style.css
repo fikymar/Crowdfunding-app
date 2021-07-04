@@ -105,7 +105,7 @@
 
 .card_count span {
   color: black;
-  font-size: 21px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -396,7 +396,7 @@
 
 .selectionModal_card_count span {
   color: black;
-  font-size: 21px;
+  font-size: 2rem;
   font-weight: 700;
 }
 
@@ -661,7 +661,7 @@
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
-  font-size: 21px;
+  font-size: 2rem;
 }
 
 .main_layout .main_header p {
@@ -878,7 +878,7 @@ a {
 
 p {
   color: #7a7a7a;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 @media (max-width: 400px) {
@@ -890,5 +890,9 @@ p {
 button,
 input {
   cursor: pointer;
+}
+
+h2 {
+  font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */
