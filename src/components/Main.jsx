@@ -80,8 +80,8 @@ const Main = () => {
                     <h2>56</h2>
                     <p>days left</p>
                 </div>
-                    <label htmlFor="counterRange"></label>
-                    <input type="range" id='counterRange' name='counterRange' min='0' max='100000' value={dollars} readOnly />
+                    <label htmlFor="counterRange" ></label>
+                    <input type="range" id="counterRange" name="counterRange" min='0' max='100000' value={dollars}  />
                         
             </article>
                 
