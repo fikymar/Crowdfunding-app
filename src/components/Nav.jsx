@@ -25,7 +25,7 @@ const Nav = () => {
         <div className='nav'>
             <img className='logo' src={logo} alt="logo" />
             <nav className={ `nav_list ${hamburger ? '' : 'hiddenNav'}`}>
-                <a href="/">About</a>
+                <a href="/#about">About</a>
                 <a href="/">Discover</a>
                 <a href="/">Get Started</a>
             </nav>
