@@ -69,15 +69,15 @@ const Main = () => {
 
             <article className="main_counter">
                 <div className="main_counter--area">
-                    <h1>{`$ ${dollars.toLocaleString('en')}`}</h1>
+                    <h2>{`$ ${dollars.toLocaleString('en')}`}</h2>
                     <p>of $100,000 backed</p>
                 </div>
                 <div className="main_counter--area">
-                    <h1>{backers.toLocaleString('en')}</h1>
+                    <h2>{backers.toLocaleString('en')}</h2>
                     <p>total backers</p>
                 </div>
                 <div className="main_counter--area">
-                    <h1>56</h1>
+                    <h2>56</h2>
                     <p>days left</p>
                 </div>
                     <label htmlFor="counterRange"></label>
